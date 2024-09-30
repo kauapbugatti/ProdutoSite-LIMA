@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto - RetroJoga</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="faviconGame.ico" type="image/x-icon">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        header, footer { background-color: #333; color: white; text-align: center; padding: 10px 0; }
+        .product { display: flex; }
+        .images { margin-right: 20px; }
+        .thumbnails img { width: 50px; cursor: pointer; }
+        .details { max-width: 400px; }
+        .buy-button {
+            background-color: #4CAF50; 
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .buy-button:hover {
+            background-color: #45a049; 
+        }
+    </style>
+</head>
+<body>
+<div id="top"></div>
+    <header>
+        <h1><a href="#top" style="color: white; text-decoration: none;">RetroJoga - Produtos de Videogame</a></h1>
+        <a href="#comentarios" style="color: white; text-decoration: underline;">Ver Comentários |</a>
+        <a href="#mainImage" style="color: white; text-decoration: underline;"> Produto</a>
+    </header>
+
+    
+
+    <div class="product">
+        <div class="images">
+            <img id="mainImage" src="Imagem1.webp" alt="Jogo de Videogame" width="300">
+            <div class="thumbnails">
+                <img src="Imagem1.webp" alt="Imagem 1" onmouseover="changeImage('Imagem1.webp')">
+                <img src="imagem2.jfif" alt="Imagem 2" onmouseover="changeImage('imagem2.jfif')">
+
+            </div>
+        </div>
+        <div class="details">
+            <h2>Plants Vs Zombies Garden Warfare 2 Standard Edition p 4</h2>
+            <p>Plants Vs Zombies Garden Warfare 2 - PlayStation 4 <br>
+                · Neste hilariante jogo de tiro repleto de ação, o líder dos zumbis, o Dr. Zumbão, tornou o bairro uma utopia zumbi. <br>
+                · Plants vs Zombies Garden Warfare 2 é um jogo eletrônico de tiro em terceira pessoa, criado em 23 de fevereiro de 2016, desenvolvido pela PopCap Games e publicado pela Electronic Arts.</p>
+            <p><strong>Preço:</strong> R$ 149,90</p>
+            <button class="buy-button" onclick="buyProduct()">Comprar</button>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="product" id="comentarios"> 
+        <div class="comments">
+            <h2>Comentários dos Usuários (2)</h2>
+            <p><strong>Raulzits9869:</strong> Adorei o jogo! <img class="usuarios" src="Usuario.webp" alt="Foto do usuário"></p>
+            <p><strong>IwillKILLMyself1234:</strong> Chegou super Rápido e o disco veio em ótimas condições! <img class="usuarios" src="Usuario2.webp" alt="Foto do usuário" width="50"></p>
+        </div>
+
+        <script>
+            function changeImage(src) {
+                document.getElementById('mainImage').src = src;
+            }
+
+            function buyProduct() {
+                alert("Compra realizada com sucesso!");
+            }
+        </script>
+    </div>
+    
+    <br><br>
+
+    <footer>
+        <p>&copy; 2024 RetroJoga. Todos os direitos reservados. <br>
+            <a href="#top" style="color: white; text-decoration: underline;">Voltar ao Topo</a> | 
+            <a href="comentarios" style="color: white; text-decoration: underline;">Ver Comentários |</a>
+            <a href="#mainImage" style="color: white; text-decoration: underline;"> Produto</a>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
